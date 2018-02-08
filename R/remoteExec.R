@@ -1,5 +1,7 @@
 #' remoteExec
 #' @description execute an R expression on a remote host.
+#' @importFrom stringr str_c
+#' @importFrom magrittr %>%
 #' @export
 
 remoteExec <- function(user,host,expr){

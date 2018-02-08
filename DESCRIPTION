@@ -2,8 +2,13 @@ Package: remoteTools
 Title: Tools For Interacting With Remote Hosts
 Version: 0.0.0.9000
 Authors@R: person("Jasen", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre"))
-Description: A collection of tools for interacting with remote hosts
+Description: A collection of tools for interacting with remote hosts.
 Depends: R (>= 3.4.0)
-License:  GPL (>= 3)
+Imports: ssh,
+    openssl,
+    stringr,
+    magrittr
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1
