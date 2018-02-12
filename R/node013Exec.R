@@ -10,8 +10,8 @@ node013Exec <- function(user,expr,h_vmem=2){
         cmd <- expr %>% 
             as.character() %>%
             base64_encode() %>%
-            str_c('screen -dm qrsh -l h=node013,h_vmem=',h_vmem,'G; Rscript -e \'eval(parse(text = rawToChar(openssl::base64_decode("',
-                  .,'"))))\' &> ~/.tmp.txt; cat .tmp.txt; rm .tmp.txt')
+            str_c('qrsh -l h=node013,h_vmem=',h_vmem,'G \"Rscript -e \\"eval(parse(text = rawToChar(openssl::base64_decode(\'',
+                  .,'\'))))\\" &> ~/.tmp.txt; cat .tmp.txt; rm .tmp.txt\"')
         
         session <- str_c(user,'@bert.ibers.aber.ac.uk') %>%
             ssh_connect()
