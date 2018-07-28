@@ -3,3 +3,11 @@
 language: R
 sudo: false
 cache: packages
+
+r:
+  - release
+  - devel
+  
+apt_packages:
+ - libssh-dev
+
