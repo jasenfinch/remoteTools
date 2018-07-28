@@ -2,6 +2,8 @@
 #' @description execute an R expression on a remote host.
 #' @importFrom stringr str_c
 #' @importFrom magrittr %>%
+#' @importFrom ssh ssh_connect ssh_exec_internal
+#' @importFrom openssl base64_encode
 #' @export
 
 remoteExec <- function(user,host,expr){
@@ -16,8 +18,7 @@ remoteExec <- function(user,host,expr){
         
         out %>%
             .$stdout %>%
-            rawToChar() %>%
-            cat()
+            rawToChar()
     } else {
         stop('expr is not an expression')
     }
