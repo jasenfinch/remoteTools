@@ -1,5 +1,9 @@
 #' listRemoteDirectory
 #' @description list the contents of a remote directory
+#' @param user user name to use for ssh connection
+#' @param host host name to use for ssh connection
+#' @param directory directory path to list
+#' @importFrom stringr coll str_split
 #' @export
 
 listRemoteDirectory <- function(user,host,directory = '.'){

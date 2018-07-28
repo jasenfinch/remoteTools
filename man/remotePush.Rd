@@ -6,6 +6,15 @@
 \usage{
 remotePush(files, user, host, hostPath = ".")
 }
+\arguments{
+\item{files}{character vector of file or directory paths to copy.}
+
+\item{user}{user name to use for ssh connection}
+
+\item{host}{host name to use for ssh connection}
+
+\item{hostPath}{directory path to copy the files to on the host}
+}
 \description{
 copy files to a remote host
 }

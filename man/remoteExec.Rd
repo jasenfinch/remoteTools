@@ -6,6 +6,13 @@
 \usage{
 remoteExec(user, host, expr)
 }
+\arguments{
+\item{user}{user name to use for ssh connection}
+
+\item{host}{host name to use for ssh connection}
+
+\item{expr}{\code{expression()} to execute on the host}
+}
 \description{
 execute an R expression on a remote host.
 }

@@ -1,5 +1,8 @@
 #' remoteExec
 #' @description execute an R expression on a remote host.
+#' @param user user name to use for ssh connection
+#' @param host host name to use for ssh connection
+#' @param expr \code{expression()} to execute on the host
 #' @importFrom stringr str_c
 #' @importFrom magrittr %>%
 #' @importFrom ssh ssh_connect ssh_exec_internal
