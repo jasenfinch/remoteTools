@@ -12,3 +12,7 @@ r:
 apt_packages:
  - libssh-dev
 
+notifications:
+    email:
+    on_success: change
+    on_failure: change
